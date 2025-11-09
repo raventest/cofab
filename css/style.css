@@ -1,0 +1,507 @@
+/* =========================
+   COFAB Main Stylesheet
+   ========================= */
+
+/* --- Variables --- */
+:root {
+    --primary: #34495E;
+    --secondary: #ECF0F1;
+    --accent: #F39C12;
+    --tertiary: #7F8C8D;
+    --white: #ffffff;
+    --font-main: "Poppins", sans-serif;
+}
+
+/* --- Global --- */
+body {
+    margin: 0;
+    font-family: var(--font-main);
+    background: var(--secondary);
+    color: var(--primary);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* --- Header --- */
+.header {
+    background: var(--primary);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo {
+    height: 56px;
+    width: auto;
+}
+
+.brand-text h1 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--white);
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    line-height: 1.1;
+}
+
+
+/* --- Navigation --- */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--white);
+    font-weight: 500;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* --- Hero Section --- */
+.hero {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    text-align: center;
+}
+
+.hero-overlay h5 {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+.hero-overlay h1 {
+    font-size: 2rem;
+    margin: 10px 0 20px;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #d9890b;
+}
+
+/* --- Intro Section --- */
+.intro {
+    padding: 60px 0;
+    background: var(--secondary);
+}
+
+.intro-flex {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.intro-img {
+    width: 45%;
+}
+
+.intro-text p {
+    margin-bottom: 15px;
+}
+
+.btn-outline {
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    padding: 8px 16px;
+    margin-top: 20px;
+    display: inline-block;
+    border-radius: 80px;
+}
+
+.btn-outline:hover {
+    background-color: var(--accent);
+    color: #fff;
+    text-decoration: none;
+}
+
+/* --- Why Choose --- */
+.why-choose {
+    background: var(--white);
+    text-align: center;
+    padding: 80px 0;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    background: var(--secondary);
+    padding: 25px;
+    border-radius: 8px;
+    width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card i {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+
+/* --- Offer Section --- */
+.offer {
+    background: var(--secondary);
+    padding: 80px 0;
+}
+
+.offer-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.offer-text {
+    width: 50%;
+}
+
+.offer-img {
+    width: 45%;
+}
+
+/* --- Footer --- */
+.footer {
+    background: #0c1927;
+    color: var(--white);
+    padding: 50px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.footer-logo {
+    height: 50px;
+    margin-bottom: 10px;
+}
+.brand-footer {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.brand-text-footer h1 {
+    margin: 0;
+    font-size: 20px;
+    color: var(--white);
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    line-height: 1.1;
+}
+
+.footer a {
+    color: var(--white);
+    display: block;
+    margin: 5px 0;
+}
+
+.footer a:hover {
+    color: var(--accent);
+}
+
+.social-icons a {
+    margin-right: 10px;
+    color: var(--white);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--accent);
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid var(--tertiary);
+    padding-top: 10px;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+
+/* --- CTA ---*/
+ .cta {
+    background: var(--primary); 
+    color: var(--white); 
+    text-align: center; 
+    padding: 60px 20px;
+ }
+
+ /* --- Fade-in Animation --- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+ /* =========================
+   SERVICES PAGE STYLING
+   ========================= */
+
+/* --- Service Section General --- */
+.services {
+    padding: 80px 0;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   CONTACT PAGE STYLING
+   ========================= */
+
+/* --- Hero Section (Contact) --- */
+.contact-hero {
+    height: 60vh;
+    position: relative;
+}
+
+.contact-hero .hero-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    filter: brightness(65%);
+}
+
+.contact-hero .hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    text-align: center;
+}
+
+.contact-hero .hero-overlay h5 {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.contact-hero .hero-overlay h1 {
+    font-size: 2rem;
+    margin: 15px 0 10px;
+}
+
+.contact-hero .hero-overlay p {
+    font-size: 1rem;
+    color: var(--secondary);
+}
+
+/* --- Contact Section --- */
+.contact-section {
+    padding: 80px 0;
+    background: var(--secondary);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 40px;
+    align-items: start;
+}
+
+.contact-info {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    border-left: 4px solid var(--accent);
+    padding-left: 10px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.contact-info i {
+    color: var(--accent);
+    margin-right: 10px;
+}
+
+.contact-social a {
+    font-size: 1.3rem;
+    margin-right: 15px;
+    color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+.contact-social a:hover {
+    color: var(--accent);
+}
+
+/* --- Contact Form --- */
+.contact-form {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    border-left: 4px solid var(--accent);
+    padding-left: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--tertiary);
+    border-radius: 4px;
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--accent);
+    outline: none;
+    box-shadow: 0 0 5px rgba(243, 156, 18, 0.3);
+}
+
+.contact-form button {
+    background: var(--accent);
+    color: var(--white);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.contact-form button:hover {
+    background: #d9890b;
+}
+
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .intro-flex,
+    .offer-flex {
+        flex-direction: column;
+    }
+
+    .intro-img,
+    .offer-img {
+        width: 100%;
+    }
+
+    .offer-text,
+    .intro-text {
+        width: 100%;
+    }
+
+    .brand-text h1 {
+        font-size: 0.95rem;
+    }
+
+    .logo {
+        height: 48px;
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-hero .hero-overlay h1 {
+        font-size: 1.6rem;
+    }
+
+    .contact-form,
+    .contact-info {
+        padding: 20px;
+    }
+}
