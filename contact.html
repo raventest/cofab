@@ -11,7 +11,7 @@
 <body>
 
   <!-- Header -->
-  <header class="header fade-in">
+  <header class="header">
     <div class="container header-inner">
       <div class="brand">
         <a href="index.html"><img src="image/logoHeader.png" alt="COFAB Logo" class="logo"></a>
@@ -31,8 +31,8 @@
     </div>
   </header>
 
-  <!-- Contact Hero -->
-  <section class="hero contact-hero fade-in">
+  <!-- Hero Section -->
+  <section class="hero fade-in">
     <img src="image/contact.jpg" alt="Contact COFAB" class="hero-image">
     <div class="hero-overlay">
       <h1>Contact Us</h1>
@@ -44,9 +44,10 @@
   <section class="contact-section fade-in">
     <div class="container contact-grid">
 
+      <!-- Contact Form -->
       <div class="contact-form">
         <h2>Send Us a Message</h2>
-        <form action="https://formspree.io/f/xdkyneog" method="post">
+        <form action="https://formspree.io/f/xdkyneog" method="post" id="contactForm">
           <div class="form-group">
             <input type="text" name="first name" placeholder="First Name" required>
           </div>
@@ -57,7 +58,9 @@
             <input type="email" name="email" placeholder="Your Email" required>
           </div>
           <div class="form-group">
-            <input type="text" name="phone" placeholder="Phone Number" required>
+            <input type="tel" name="phone" id="phone" placeholder="+61 4XX XXX XXX" 
+                   pattern="^\+61\s?[0-9]{1,2}\s?[0-9]{3}\s?[0-9]{3}\s?[0-9]{3}$|^04[0-9]{8}$" 
+                   title="Please enter a valid Australian phone number (e.g., +61 4XX XXX XXX or 04XXXXXXXX)" required>
           </div>
           <div class="form-group">
             <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
@@ -66,7 +69,8 @@
         </form>
       </div>
 
-      <div class="contact-info">
+      <!-- Contact Info -->
+      <div class="contact-info fade-in">
         <h2>Contact Details</h2>
         <p><i class="fa-solid fa-location-dot"></i> 5/41 Stanley Street Peakhurst NSW 2210</p>
         <p><i class="fa-solid fa-phone"></i> (02) 9153 8167</p>
@@ -82,7 +86,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="footer fade-in">
+  <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-about">
         <div class="brand-footer">
@@ -125,7 +129,6 @@
     </div>
   </footer>
 
-  <!-- JavaScript -->
   <script src="js/script.js"></script>
 </body>
 </html>
